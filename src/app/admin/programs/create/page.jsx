@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import { Button, FileInput, Label, TextInput, Textarea } from 'flowbite-react'
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
-const CreateProgramPage = () => {
+export default function CreateProgramPage () {
 
   const [dataForm, setDataForm] = useState({
     title1: '',
@@ -223,5 +223,3 @@ const CreateProgramPage = () => {
     </div>
   )
 }
-
-export default CreateProgramPage

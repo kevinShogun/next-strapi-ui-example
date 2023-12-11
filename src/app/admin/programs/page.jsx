@@ -1,10 +1,10 @@
 'use client';
 import React, { useEffect, useState } from 'react'
-import { Button, Table } from 'flowbite-react';
-import { getProgramsOnly } from '../../lib/programs'
 import Link from 'next/link';
+import { Table } from 'flowbite-react';
+import { getProgramsOnly } from '../../lib/programs'
 
-const TableProgramPage = () => {
+export default function TableProgramPage () {
 
     const [data, setdata] = useState(null);
     const [token, setToken] = useState('');
@@ -81,5 +81,3 @@ const TableProgramPage = () => {
         </div>
     )
 }
-
-export default TableProgramPage

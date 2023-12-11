@@ -2,10 +2,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
 import { getOneProgramOnly } from '../../../lib/programs';
-import { Label, TextInput, Textarea, FileInput, Button } from 'flowbite-react';
+import { Button, FileInput, Label, TextInput, Textarea } from 'flowbite-react';
 
-export const PageEdit = () => {
-
+export default function PageEdit() {
     const { slug } = useParams();
     const [dataForm, setDataForm] = useState({
         title1: '',
@@ -58,7 +57,7 @@ export const PageEdit = () => {
 
     }, [token, slug]);
 
-    console.log(datafromApi)
+    // console.log(datafromApi)
 
     const onSubmitForm = async (e) => {
         e.preventDefault();
@@ -270,5 +269,3 @@ export const PageEdit = () => {
         </div>
     )
 }
-export default PageEdit;
-
